@@ -130,6 +130,9 @@ function create ()
     this.physics.add.overlap(player, stars, collectStar, null, this);
 
     this.physics.add.collider(player, bombs, hitBomb, null, this);
+
+    this.cameras.main.setSize(800, 600);
+    this.cameras.main.startFollow(player);
 }
 
 function update ()
